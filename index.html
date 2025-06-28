@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahmed | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+  <canvas id="neuralCanvas"></canvas>
+  <button class="theme-toggle" id="themeToggle">🌙 Dark Mode</button>
+  
+  <nav class="navbar">
+    <div class="container">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#training">Training</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#awards">Awards</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Visit Counter -->
+  <div class="visit-counter">
+    <span class="visit-icon">👁️</span>
+    <span class="visit-text">Visits: <span id="visitCount">0</span></span>
+  </div>
+
+  <div class="cover-frame">
+    <div class="hero-content">
+      <div class="hero-image">
+        <img src="src/IMG_20250622_093900111111111111111.jpg" alt="Ahmed's Profile Photo" class="hero-profile-img" />
+      </div>
+      <div class="quote-container">
+        <p class="quote-text">Just Start and You Will Reach</p>
+        <p class="quote-subtitle">Your Cosmic Journey Begins Here</p>
+      </div>
+      <div class="hero-info">
+        <h1>I'm Ahmed Labib</h1>
+        <p class="hero-subtitle">Freelancer Data Analyst & AI Engineer </p>
+      </div>
+    </div>
+  </div>
+
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Second-year Computer Science student specialized in Data Analysis and Machine Learning. Skilled in Python, C++, and Java, with hands-on experience in +10 projects focused on data analysis, database efficiency, and real-world problem-solving. Proficient in key Python libraries like Scikit-Learn, Pandas and NumPy, with a competitive programming background that sharpens analytical and coding abilities.
+      </p>
+      <p>
+        Eager to leverage technical expertise and working on Data Analysis projects. Aspiring to be an Expert AI Engineer and complete my Academic studies abroad at MIT University.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>My Projects</h2>
+      <div class="project-categories">
+        <button class="category-btn active" data-category="all">All</button>
+        <button class="category-btn" data-category="power-bi">Power BI</button>
+        <button class="category-btn" data-category="data-analysis">Google Sheets</button>
+        <button class="category-btn" data-category="excel">Excel</button>
+        <button class="category-btn" data-category="database">Database</button>
+        <button class="category-btn" data-category="streamlit">Streamlit</button>
+        <button class="category-btn" data-category="tableau">Tableau</button>
+        <button class="category-btn" data-category="plotly">Plotly</button>
+      </div>
+      <ul class="project-list">
+        <!-- Egypt Climate & Sustainability Project -->
+        <li class="project-item data-analysis">
+          <a href="#" class="project-card">
+            <div class="slider">
+              <div class="slides">
+                <img src="src/Climate Change Project Dashboards/3.jpg" alt="Climate Project 0" />
+                <img src="src/Climate Change Project Dashboards/Screenshot 2025-05-22 120700.png" alt="Climate Project 1" />
+                <img src="src/Climate Change Project Dashboards/Screenshot 2025-05-22 120724.png" alt="Climate Project 2" />
+                <img src="src/Climate Change Project Dashboards/Screenshot 2025-05-22 120748.png" alt="Climate Project 3" />
+                <img src="src/Climate Change Project Dashboards/Screenshot 2025-05-22 120812.png" alt="Climate Project 4" />
+                <img src="src/Climate Change Project Dashboards/Screenshot 2025-05-22 120829.png" alt="Climate Project 5" />
+              </div>
+              <button class="prev">❮</button>
+              <button class="next">❯</button>
+            </div>
+            <h3>Egypt Climate & Sustainability</h3>
+            <p>Data Analysis Project - Analyzed NASA-provided climate data for Egypt to extract key insights on temperature, rainfall, wind, solar radiation, and soil conditions. Developed an interactive, user-friendly website using Streamlit, featuring 5 dynamic dashboards and visual heat maps to support sustainable decision-making.</p>
+          </a>
+        </li>
+      </ul>
+      
+      <ul class="project-list remaining-projects">
+      <!-- Educational Center Management System Project -->
+      <li class="project-item Google Sheets">
+        <a href="https://github.com/Ahmed-Labib/Educational-Center-Management-System" class="project-card">
+          <div class="slider">
+            <div class="slides">
+              <img src="src/Educational Center Mangement System/2.jpg" alt="Java Project 1" />
+              <img src="src/Educational Center Mangement System/Screenshot 2025-05-05 220558.png" alt="Java Project 2" />
+              <img src="src/Educational Center Mangement System/Screenshot 2025-05-05 221321.png" alt="Java Project 3" />
+              <img src="src/Educational Center Mangement System/Screenshot 2025-05-05 221410.png" alt="Java Project 4" />
+              <img src="src/Educational Center Mangement System/Screenshot 2025-05-05 221449.png" alt="Java Project 5" />
+              <img src="src/Educational Center Mangement System/Screenshot 2025-05-05 222058.png" alt="Java Project 6" />
+              <img src="src/Educational Center Mangement System/Screenshot 2025-05-05 222115.png" alt="Java Project 7" />
+              <img src="src/Educational Center Mangement System/Screenshot 2025-05-05 222338.png" alt="Java Project 8" />
+              <img src="src/Educational Center Mangement System/Screenshot 2025-05-05 222410.png" alt="Java Project 9" />
+              <img src="src/Educational Center Mangement System/Screenshot 2025-05-05 222442.png" alt="Java Project 10" />
+            </div>
+            <button class="prev">❮</button>
+            <button class="next">❯</button>
+          </div>
+          <h3>Educational Center Management System</h3>
+          <p>Google Sheets and App Sheet Project - Developed a comprehensive Pages to manage and Store student data, including attendance, grades, and performance metrics. Implemented a user-friendly interface with dynamic filters to support data-driven decision-making.</p>
+        </a>
+      </li>
+      
+        <!-- Netflix Dashboard Project -->
+        <li class="project-item data-analysis tableau">
+          <a href="#" class="project-card">
+            <div class="slider">
+              <div class="slides">
+                <img src="src/Netflix Dashboard/6.jpg" alt="Netflix Project 1" />
+                <img src="src/Netflix Dashboard/Screenshot 2025-04-17 151240.png" alt="Netflix Project 2" />
+              </div>
+              <button class="prev">❮</button>
+              <button class="next">❯</button>
+            </div>
+            <h3>Netflix Dashboard</h3>
+            <p>Data Analysis Project - Processed and cleaned Netflix dataset using Pandas, handling null values and formatting inconsistencies to ensure data quality. Designed an interactive Tableau dashboard to visualize key insights and enhance user understanding through clear, actionable narratives.</p>
+          </a>
+        </li>
+
+        <!-- E-commerce Dashboard Project -->
+        <li class="project-item data-analysis excel">
+          <a href="#" class="project-card">
+            <div class="slider">
+              <div class="slides">
+                <img src="src/Company Managment Project/1.jpg" alt="E-commerce Project 1" />
+                <img src="src/Company Managment Project/Screenshot 2025-05-07 144109.png" alt="E-commerce Project 2" />
+                <img src="src/Company Managment Project/Screenshot 2025-05-07 144612.png" alt="E-commerce Project 3" />
+                <img src="src/Company Managment Project/Screenshot 2025-05-07 144730.png" alt="E-commerce Project 4" />
+                <img src="src/Company Managment Project/Screenshot 2025-05-07 144742.png" alt="E-commerce Project 5" />
+                <img src="src/Company Managment Project/Screenshot 2025-05-07 144754.png" alt="E-commerce Project 6" />
+              </div>
+              <button class="prev">❮</button>
+              <button class="next">❯</button>
+            </div>
+            <h3>Company Managment Project</h3>
+            <p>Excel Data Analysis Project - Built a comprehensive Excel dashboard to analyze Company performance and help managers to show the performance of the company, focusing on key metrics like delivery time and operational efficiency. Derived actionable insights to identify improvement areas and support data-driven decision-making.</p>
+          </a>
+        </li>
+
+        <!-- Bookstore Management System Project -->
+        <li class="project-item database">
+          <a href="#" class="project-card">
+            <div class="slider">
+              <div class="slides">
+                <img src="src/DataBase Createion/8.jpg" alt="Database Project 1" />
+                <img src="src/DataBase Createion/Screenshot 2025-02-06 203426.png" alt="Database Project 2" />
+              </div>
+              <button class="prev">❮</button>
+              <button class="next">❯</button>
+            </div>
+            <h3>Bookstore Management System</h3>
+            <p>Database Design Project - Designed the ERD model and mapped it into a relational schema for a comprehensive Bookstore Management System. Implemented the database using Oracle DBMS, ensuring normalization and efficient data structure.</p>
+          </a>
+        </li>
+
+
+        <!-- Stroke Prediction Model Project -->
+        <li class="project-item machine-learning">
+          <a href="#" class="project-card">
+            <div class="slider">
+              <div class="slides">
+                <img src="src/Python Projects/5.jpg" alt="ML Project 1" />
+              </div>
+              <button class="prev">❮</button>
+              <button class="next">❯</button>
+            </div>
+            <h3>Stroke Prediction Model</h3>
+            <p>Machine Learning Project - Developed a Logistic Regression model to predict stroke risk based on medical and demographic data, achieving 87.5% accuracy. Deployed the model through an interactive interface for practical usage and testing.</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="education-container">
+      <div class="education-item">
+        <div class="education-header">
+          <h3>Bachelor of Science in Computer and Information Sciences</h3>
+          <span class="training-date">October 2023 – Expected 2027</span>
+        </div>
+        <p class="institution">Ain Shams University</p>
+        <p class="gpa">GPA: 3.43/4</p>
+        <div class="specialization-courses">
+          <h4>Specialization Courses:</h4>
+          <ul>
+            <li>Probability and Statistics</li>
+            <li>Structured Programming</li>
+            <li>Calculus 1 & 2</li>
+            <li>Data Structures</li>
+            <li>Artificial Intelligence</li>
+            <li>Statistical Analysis</li>
+            <li>Object-Oriented Programming (OOP)</li>
+            <li>Database Management Systems</li>
+            <li>Linear Algebra</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training Section -->
+  <section id="training">
+    <h2>Training & Certifications</h2>
+    <div class="training-container">
+      <div class="training-item">
+        <div class="training-header">
+          <h3>Digital Egypt Pioneers Initiative (Depi)</h3>
+          <span class="training-date">November 2024 – May 2025</span>
+        </div>
+        <p class="training-institution">Data Analyst Training Program</p>
+        <div class="training-achievements">
+          <h4>Key Achievements:</h4>
+          <ul>
+            <li>Cleaned and processed real-world datasets using Python (Pandas) and SQL to ensure data accuracy and reliability</li>
+            <li>Created insightful visualizations using Matplotlib, Seaborn, and Plotly to support data-driven decision-making</li>
+            <li>Developed comprehensive analytical dashboards and reports using Tableau and Power BI</li>
+            <li><strong>Top Achievement:</strong> Delivered a high-impact project on Egypt Climate Change, selected as the Top Achievement Team out of over 300 competing projects</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="training-item">
+        <div class="training-header">
+          <h3>ACM ICPC FCIS Community</h3>
+          <span class="training-date">November 2024 – Expected April 2025</span>
+        </div>
+        <p class="training-institution">Competitive Programming Community Member</p>
+        <div class="training-achievements">
+          <h4>Skills Developed:</h4>
+          <ul>
+            <li>Advanced problem-solving skills with focus on STLs, binary search, number theory, and time complexity optimization</li>
+            <li>Currently working on advanced topics like graph algorithms</li>
+            <li>Active participation in programming contests (Codeforces Profile)</li>
+            <li>Enhanced analytical thinking and algorithmic problem-solving capabilities</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="training-item">
+        <div class="training-header">
+          <h3>ApplAI Summer Training</h3>
+          <span class="training-date">August 2024 – September 2024</span>
+        </div>
+        <p class="training-institution">Machine Learning Training Program</p>
+        <div class="training-achievements">
+          <h4>Learning Outcomes:</h4>
+          <ul>
+            <li>Comprehensive training in Machine Learning with hands-on experience with various models</li>
+            <li>Mastered data preprocessing techniques and model evaluation methods</li>
+            <li>Developed a strong understanding of ML fundamentals to solve real-world problems</li>
+            <li>Practical experience with machine learning algorithms and their applications</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <div class="skills-category">
+        <h3>Programming Languages</h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="fab fa-python"></i>
+            <span>Python</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-code"></i>
+            <span>C++</span>
+          </div>
+          <div class="skill-item">
+            <i class="fab fa-java"></i>
+            <span>Java</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Python Libraries & Frameworks</h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="fas fa-table"></i>
+            <span>Pandas</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-calculator"></i>
+            <span>NumPy</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-chart-line"></i>
+            <span>Matplotlib</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-chart-area"></i>
+            <span>Seaborn</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-chart-pie"></i>
+            <span>Plotly</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-map"></i>
+            <span>Folium</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-brain"></i>
+            <span>Scikit-learn</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Data Analysis & Visualization</h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="fas fa-chart-line"></i>
+            <span>Tableau</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-chart-bar"></i>
+            <span>Power BI</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-table"></i>
+            <span>Excel</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-file-excel"></i>
+            <span>Google Sheets</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Tools & Technologies</h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="fas fa-database"></i>
+            <span>SQL</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-database"></i>
+            <span>Database Design</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-code-branch"></i>
+            <span>Git</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-brain"></i>
+            <span>Machine Learning</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-laptop-code"></i>
+            <span>Jupyter Notebooks</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-category">
+        <h3>Soft Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-item">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <span>Teaching</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-users"></i>
+            <span>Leadership</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-comments"></i>
+            <span>Communication</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-search"></i>
+            <span>Analytical Skills</span>
+          </div>
+          <div class="skill-item">
+            <i class="fas fa-hands-helping"></i>
+            <span>Teamwork</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <div class="experience-container">
+      <div class="experience-item">
+        <div class="experience-header">
+          <h3>Math Teacher</h3>
+          <span class="experience-date">Jan 2025 – Apr 2025</span>
+        </div>
+        <p class="company">Private Tutoring</p>
+        <ul class="experience-description">
+          <li>Taught mathematics to primary students from 4th grade to 1st preparatory level</li>
+          <li>Helped students grasp foundational topics such as long division, fractions, and other core math concepts through simplified explanations and engaging methods</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards & Achievements Section -->
+  <section id="awards">
+    <h2>Awards & Achievements</h2>
+    <div class="awards-container">
+      <div class="award-item">
+        <div class="award-icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <div class="award-content">
+          <h3>Top Achievement Project</h3>
+          <p class="award-date">2025</p>
+          <p class="award-description">Selected as the Top Achievement Team out of over 300 competing projects in the Digital Egypt Pioneers Initiative for the Egypt Climate Change project.</p>
+        </div>
+      </div>
+      
+      <div class="award-item">
+        <div class="award-icon">
+          <i class="fas fa-medal"></i>
+        </div>
+        <div class="award-content">
+          <h3>Academic Excellence</h3>
+          <p class="award-date">2023</p>
+          <p class="award-description">Ranked in the top 0.17% in Egypt's Thanawya Amma (GCSE) Mathematical Section, demonstrating exceptional mathematical aptitude and analytical skills.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-container">
+      <div class="contact-wrapper">
+        <p>If you want to take your business to the next level and make smarter decisions? Let's collaborate and make it happen!</p>
+        
+
+        <form id="contact-form" class="contact-form" ref="form">
+          <div class="form-flex">
+            <div class="form-group">
+              <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                placeholder="What's your name?"
+                required
+                class="form-input"
+              />
+              <label for="name" class="form-label">Your Name</label>
+              <span class="error-message" id="name-error">Please enter your name</span>
+            </div>
+            
+            <div class="form-group">
+              <input 
+                type="text" 
+                id="email" 
+                name="email" 
+                placeholder="How can I reach you?"
+                required
+                class="form-input"
+              />
+              <label for="email" class="form-label">Email / Phone</label>
+              <span class="error-message" id="email-error">Please enter your email or phone number</span>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <textarea 
+              id="message" 
+              name="message" 
+              placeholder="Send me any inquiries or questions"
+              rows="4"
+              required
+              class="form-input body-form"
+            ></textarea>
+            <label for="message" class="form-label">Message</label>
+            <span class="error-message" id="message-error">Please enter the message</span>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <span>Send</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <div class="contact-info">
+    <div class="contact-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Cairo, Egypt</span>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-phone"></i>
+      <span>+201144664103</span>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <span>ahmed.a.a.labib@gmail.com</span>
+    </div>
+    <div class="contact-item">
+      <i class="fab fa-github"></i>
+      <span>github.com/ahmedlapip</span>
+    </div>
+    <div class="contact-item">
+      <i class="fab fa-linkedin"></i>
+      <span>linkedin.com/in/ahmed-a-alabib</span>
+    </div>
+  </div>
+  <footer>
+    <p>&copy; 2025 Ahmed Labib. All rights reserved.</p>
+  </footer>
+  
+  <!-- EmailJS Script -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("cBuVPv1JeKzuXZc7V");
+    })();
+  </script>
+  
+  <script src="script.js"></script>
+</body>
+</html>
