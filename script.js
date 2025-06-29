@@ -186,58 +186,15 @@ class NeuralNetwork {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
     this.neurons = [];
-    this.visitCount = 0;
-    this.lastVisitTime = 0;
     
     this.init();
     this.setupEventListeners();
     this.animate();
-    this.initVisitCounter();
-  }
-
-  initVisitCounter() {
-    // Load existing visit count from localStorage
-    const storedCount = localStorage.getItem('visitCount');
-    this.visitCount = storedCount ? parseInt(storedCount) : 0;
-    
-    // Check if this is a new session (not just a page refresh)
-    const lastVisit = localStorage.getItem('lastVisitTime');
-    const now = Date.now();
-    
-    // If it's been more than 30 minutes since last visit, count as new visit
-    if (!lastVisit || (now - parseInt(lastVisit)) > 30 * 60 * 1000) {
-      this.visitCount++;
-      localStorage.setItem('visitCount', this.visitCount.toString());
-    }
-    
-    // Update last visit time
-    localStorage.setItem('lastVisitTime', now.toString());
-    
-    // Update display
-    this.updateVisitDisplay();
-  }
-
-  updateVisitDisplay() {
-    const visitCountElement = document.getElementById('visitCount');
-    if (visitCountElement) {
-      visitCountElement.textContent = this.visitCount.toLocaleString();
-      
-      // Add a subtle animation when the count updates
-      visitCountElement.style.transform = 'scale(1.1)';
-      setTimeout(() => {
-        visitCountElement.style.transform = 'scale(1)';
-      }, 200);
-    }
-  }
-
-  getVisitCount() {
-    return this.visitCount;
   }
 
   init() {
     this.resize();
     this.createNeurons();
-    this.updateVisitDisplay();
   }
 
   resize() {
@@ -482,7 +439,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     // Send email using EmailJS
-    emailjs.send('service_8cbwmxj', 'template_n2cfnzl', templateParams, 'cBuVPv1JeKzuXZc7V')
+    emailjs.send('service_7m9j37q', 'template_q6n6h9s', templateParams, 'iFFCXxiXnui-bGUbE')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         
@@ -541,3 +498,134 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // You can add JavaScript functionality here
 console.log("Portfolio script loaded");
+
+// Visit Counter Functionality - Moved outside NeuralNetwork class for better reliability
+function initVisitCounter() {
+  // Load existing visit count from localStorage
+  const storedCount = localStorage.getItem('visitCount');
+  let visitCount = storedCount ? parseInt(storedCount) : 0;
+  
+  console.log('Previous visit count:', visitCount);
+  
+  // Check if this is a new session (not just a page refresh)
+  const lastVisit = localStorage.getItem('lastVisitTime');
+  const now = Date.now();
+  
+  console.log('Last visit time:', lastVisit ? new Date(parseInt(lastVisit)).toLocaleString() : 'Never');
+  console.log('Current time:', new Date(now).toLocaleString());
+  
+  // If it's been more than 30 minutes since last visit, count as new visit
+  if (!lastVisit || (now - parseInt(lastVisit)) > 30 * 60 * 1000) {
+    visitCount++;
+    localStorage.setItem('visitCount', visitCount.toString());
+    console.log('Visit count incremented to:', visitCount);
+  } else {
+    console.log('Visit not counted (within 30 minutes)');
+  }
+  
+  // Update last visit time
+  localStorage.setItem('lastVisitTime', now.toString());
+  
+  // Update display
+  updateVisitDisplay(visitCount);
+  
+  return visitCount;
+}
+
+function updateVisitDisplay(visitCount) {
+  const visitCountElement = document.getElementById('visitCount');
+  if (visitCountElement) {
+    visitCountElement.textContent = visitCount.toLocaleString();
+    console.log('Visit count displayed:', visitCount);
+    
+    // Add a subtle animation when the count updates
+    visitCountElement.style.transform = 'scale(1.1)';
+    setTimeout(() => {
+      visitCountElement.style.transform = 'scale(1)';
+    }, 200);
+  } else {
+    console.error('Visit count element not found!');
+  }
+}
+
+// Initialize visit counter when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Ensure the visit counter element exists before initializing
+  const visitCountElement = document.getElementById('visitCount');
+  if (visitCountElement) {
+    initVisitCounter();
+  } else {
+    console.error('Visit counter element not found in DOM');
+    // Try again after a short delay in case the element loads later
+    setTimeout(() => {
+      const retryElement = document.getElementById('visitCount');
+      if (retryElement) {
+        initVisitCounter();
+      } else {
+        console.error('Visit counter element still not found after retry');
+      }
+    }, 100);
+  }
+});
+
+// Manual reset function for testing (remove in production)
+function resetVisitCounter() {
+  localStorage.removeItem('visitCount');
+  localStorage.removeItem('lastVisitTime');
+  console.log('Visit counter reset');
+  initVisitCounter();
+}
+
+// Collapsible Navigation for Mobile
+document.addEventListener('DOMContentLoaded', () => {
+  const navbarToggle = document.getElementById('navbarToggle');
+  const navbarMenu = document.getElementById('navbarMenu');
+  
+  if (navbarToggle && navbarMenu) {
+    navbarToggle.addEventListener('click', () => {
+      navbarMenu.classList.toggle('show');
+      
+      // Toggle body scroll
+      document.body.classList.toggle('menu-open');
+      
+      // Change icon based on menu state
+      const icon = navbarToggle.querySelector('i');
+      if (navbarMenu.classList.contains('show')) {
+        icon.className = 'fas fa-times';
+      } else {
+        icon.className = 'fas fa-bars';
+      }
+    });
+    
+    // Close menu when clicking on a link
+    const navLinks = navbarMenu.querySelectorAll('a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        navbarMenu.classList.remove('show');
+        document.body.classList.remove('menu-open');
+        const icon = navbarToggle.querySelector('i');
+        icon.className = 'fas fa-bars';
+      });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navbarToggle.contains(e.target) && !navbarMenu.contains(e.target)) {
+        navbarMenu.classList.remove('show');
+        document.body.classList.remove('menu-open');
+        const icon = navbarToggle.querySelector('i');
+        icon.className = 'fas fa-bars';
+      }
+    });
+    
+    // Close menu on window resize (if screen becomes larger)
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+        navbarMenu.classList.remove('show');
+        document.body.classList.remove('menu-open');
+        const icon = navbarToggle.querySelector('i');
+        icon.className = 'fas fa-bars';
+      }
+    });
+  }
+});
